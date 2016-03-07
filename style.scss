@@ -1,0 +1,351 @@
+@import 'sass/variables';
+@import 'sass/mixins';
+
+body {
+	color: $body-text;
+	font-family: $main-font;
+	@include fontSize(14px);
+	position: relative;
+}
+
+/*.row {
+	max-width: 60rem;
+}*/
+
+h1 {
+	color: $purple;
+	@include fontSize(36px);
+	font-weight: 300;
+	margin-bottom: 36px;
+}
+
+h2 {
+	@include fontSize(16px);
+	font-weight: bold;
+}
+
+a {
+	&,
+	&:focus,
+	&:hover,
+	&:active {
+		color: $blue;
+	}	
+}
+
+p {
+	line-height: 1.3em;
+}
+
+.btn-default {
+	background: $purple;
+	color: #fff;
+	display: block;
+	@include fontSize(18px);
+	font-weight: bold;
+	margin-bottom: 25px;
+	padding: 10px 0;
+	width: 100%;
+}
+
+/* Header */
+header {
+	background: $blue;
+	margin-bottom: 45px;
+}
+
+.header-logo {
+	img {
+		display: inline-block;
+		margin: 3px 8px 5px 0;
+	}
+	a h2 {
+		color: #1c264a;
+		display: inline-block;
+		font-family: $logo-font;
+		@include fontSize(24.54px);
+		font-weight: normal;
+		margin: 0;
+		position: relative;
+		top: 6px;
+	}
+}
+
+nav {
+	> ul.menu {
+		float: right;
+		> li > a {
+			color: #f9f8f9;
+			@include fontSize(16px);
+			padding: 0.9rem 1rem;
+			@include transition-all(0.3s);
+			&:hover {
+				background: $nav-hover;
+				color: #f9f8f9;
+			}
+		}
+	}
+}
+
+/* Content */
+.content a:hover {
+	text-decoration: underline;
+}
+
+.mobile-info {
+	background: $mobile-bg;
+	margin: 33px 0 50px;
+}
+
+.mobile-info-inner {
+	padding: 16px;
+	h2 {
+		color: $purple;
+		line-height: 1em;
+		margin-bottom: 11px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.mobile-image {
+	position: relative;
+	& > img {
+		position: absolute;
+		right: 30px;
+		bottom: -83px;
+	}
+}
+
+.rates {
+	margin-bottom: 76px;
+	h2 {
+		@include fontSize(28px);
+		font-weight: normal;
+		line-height: 1.6em;
+		span {
+			border-right: 1px solid #505050;
+			display: inline-block;
+			font-weight: 300;
+			margin-right: 15px;
+			padding-right: 15px;
+		}
+	}
+	table {
+		margin-bottom: 10px;
+	}
+	tbody {
+		border: 0 none;
+	}
+	th,
+	p {
+		@include fontSize(12px);
+		font-weight: 300;
+	}
+	td {
+		@include fontSize(16px);
+	}
+	tr:nth-child(2) td {
+		@include fontSize(18px);
+		font-weight: bold;
+	}
+	tr:nth-child(odd) {
+		background: $table-bg-odd;
+	}
+	tr:nth-child(even) {
+		background: $table-bg-even;
+	}
+	tr:first-child {
+		background: none;
+	}
+	p {
+		line-height: 1em;
+		margin-bottom: 0;
+	}
+}
+
+/* Sidebar */
+.tabs-content div:not(:first-child) {
+	display: none;
+}
+
+.tabs {
+	margin-bottom: 30px;
+}
+
+.tabs,
+.tabs-content {
+	border: 0 none;
+}
+
+.tabs-nav,
+.tabs-content {
+	position: relative;
+}
+
+.tabs-nav {
+	overflow: auto;	
+	top: 1px;
+	ul {
+		margin: 0;
+	}
+	ul li {		
+		background: #ddebe1;
+		display: block;
+		float: left;
+		position: relative;
+		top: 9px;
+		z-index: 1;
+	}
+	ul li a {
+		color: $blue;
+		display: block;
+		@include fontSize(18px);
+		line-height: 1em;
+		padding: 11px 17px 12px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	ul li.active {
+		background: #f5f5f5;
+		top: 0;
+		position: relative;
+		z-index: 2;
+		a {
+			color: $body-text;
+			padding-top: 20px;
+		}
+	}
+}
+
+.tab-first,
+.tab-second {	
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	&.active {	
+		border-width: 1px 1px 0 0;
+	}
+}
+
+.tab-second {
+	border-width: 1px 1px 0 0;
+	&.active {
+		border-width: 1px 1px 0 1px;
+	}
+}
+
+.tabs-content {
+	background: #f5f5f5;
+	border-top: 1px solid #ccc;
+	box-sizing: border-box;
+	padding: 30px 14px;
+	z-index: 1;
+	h2 a {
+		color: $blue;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+#tab2 h2 {
+	margin-bottom: 21px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Footer */
+footer {
+	background: $footer-bg;
+	@include fontSize(16px);
+	padding: 20px 0 68px;
+	&,
+	a {
+		color: $blue;
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		width: 100%;
+	}
+	li {
+		display: inline-block;
+		text-align: center;
+		a {		
+			&:hover {
+				font-weight: bold;
+				letter-spacing: -0.5px;
+			}
+		}
+	}		
+}
+
+/* Modal */
+.modal-overlay {  
+	background: rgba(0,0,0,0.5);
+	display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;  
+}
+
+.login-modal {
+	background: #fff;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,.65);
+	box-sizing: border-box;
+	display: none;
+	height: 274px;
+	left: 0;
+	margin: 0 auto;
+	padding: 30px;
+	position: fixed;
+	right: 0;
+	top: 140px;
+	width: 448px;
+	z-index: 6;
+	button {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+	h2 {
+		color: $body-text;
+		font-weight: 300;
+		@include fontSize(28px);
+		line-height: 1em;
+		margin-bottom: 41px;
+	}
+	label {
+		color: $body-text;
+		float: left;
+		font-weight: bold;
+		margin-right: 5%;
+		position: relative;
+		top: 7px;
+		width: 20%;
+	}
+	input.form-text {
+		border: 1px solid $blue;
+		float: left;
+		width: 74%;
+	}
+	.btn-default {
+		border: 0 none;
+		display: inline-block;
+		float: right;
+		margin-bottom: 0;
+		padding: 7px 0;
+		width: 140px;
+	}
+}
+
+
+@import 'sass/media-queries';

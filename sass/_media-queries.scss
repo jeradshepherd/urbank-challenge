@@ -1,0 +1,68 @@
+@media only screen and (max-width: 960px) {
+	.mobile-image > img {
+		right: 10px;
+	}
+}
+
+@media only screen and (max-width: 819px) {
+	.mobile-image > img {
+		bottom: -105px;
+	}
+
+	.tabs-nav ul li a {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 715px) {
+	.tabs-nav ul li a {
+		padding: 11px 12px 12px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.main-navigation {
+		button {
+			color: #fff;
+			font-size: 16px;
+			margin-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	nav {
+		ul.menu {
+			display: none;
+			float: left;
+			width: 100%;
+			& li {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.tabs-nav ul li a {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.login-modal {
+		height: auto;
+		top: 30px;
+		width: 75%;
+		h2 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		label {
+			display: block;
+			float: none;
+			margin-bottom: 10px;
+		}
+		input.form-text {
+			width: 100%;
+		}
+	}
+}
